@@ -14,7 +14,7 @@
         title="请选择要添加的分类"
         :visible.sync="dialogVisible"
         width="30%"
-        :before-close="handleClose"
+       
       >
         <!-- 选择器 -->
         <el-select v-model="value" placeholder="请选择" @change="selectChanged">
@@ -88,14 +88,7 @@ export default {
     };
   },
   methods: {
-    handleClose(done) {
-      this.$confirm("确认关闭？")
-        .then(_ => {
-          done();
-
-        })
-        .catch(_ => {});
-    },
+  
     selectChanged(value) {
       console.log(value);
     },
@@ -179,13 +172,15 @@ export default {
     position:fixed;
     width: 150px;
     height: 50px;
-    background-color: #654dbd;
+    background-image: linear-gradient(to right, #E5E5E5 , #6348C9);
     border-radius: 25px;
+     box-shadow: #8870e0  3px 3px 8px 2px; 
     text-align: center;
     line-height: 50px;
     font-size: 25px;
     letter-spacing: 5px;
     color: #fff;
+    opacity: .88;
   }
   .sm {
     top: 266px;
