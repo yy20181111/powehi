@@ -6,4 +6,5 @@ body,
     padding: 0;
     min-width: 1366px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }

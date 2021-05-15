@@ -22,7 +22,7 @@
             v-for="item in options"
             :key="item.index"
             :label="item.label"
-            :value="item.value"
+            :value="item"
           ></el-option>
         </el-select>
         <span slot="footer" class="dialog-footer">
@@ -31,14 +31,7 @@
         </span>
       </el-dialog>
       <!-- 动态添加小标签 -->
-      <div class="sm icon" v-show="arr.indexOf('sm')>-1">私密</div>
-      <div class="fz icon" v-show="arr.indexOf('fz')>-1">肥宅快乐</div>
-      <div class="ym icon" v-show="arr.indexOf('ym')>-1">隐秘角落</div>
-      <div class="tx icon" v-show="arr.indexOf('tx')>-1">同性恋</div>
-      <div class="wy icon" v-show="arr.indexOf('wy')>-1">午夜失眠</div>
-      <div class="sg icon" v-show="arr.indexOf('sg')>-1">我是帅哥</div>
-      <div class="mv icon" v-show="arr.indexOf('mv')>-1">我是美女</div>
-      <div class="wz icon" v-show="arr.indexOf('wz')>-1">王者荣耀</div> 
+      <div class=" icon" v-for="item in arr" :key="item.label"  :class="item.value">{{item.label}}</div>
     </div>
   </div>
 </template>
@@ -119,7 +112,7 @@ export default {
   width: 100%;
   height: calc(100% - 122px);
   // background-image: url("../assets/images/bg2.png");
-  background: url("../assets/images/bg2.png") no-repeat fixed 0 -30px;
+  background: url("../assets/images/bg2.png") no-repeat fixed 0 0;
   background-size: cover;
   overflow: hidden;
   position: relative;

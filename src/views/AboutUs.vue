@@ -1,16 +1,16 @@
 <template>
   <div>
-   <Header></Header>
+    <Header></Header>
     关于我们
   </div>
 </template>
 
 <script>
-import Header from "../components/header"
+import Header from "../components/header";
 export default {
-components:{
-  Header
-}
+  components: {
+    Header,
+  },
 };
 </script>
 
