@@ -14,7 +14,6 @@
         title="请选择要添加的分类"
         :visible.sync="dialogVisible"
         width="30%"
-       
       >
         <!-- 选择器 -->
         <el-select v-model="value" placeholder="请选择" @change="selectChanged">
@@ -31,7 +30,14 @@
         </span>
       </el-dialog>
       <!-- 动态添加小标签 -->
-      <div class=" icon" v-for="item in arr" :key="item.label"  :class="item.value">{{item.label}}</div>
+      <div
+        class="icon"
+        v-for="item in arr"
+        :key="item.label"
+        :class="item.value"
+      >
+        {{ item.label }}
+      </div>
     </div>
   </div>
 </template>
@@ -42,65 +48,63 @@ export default {
   data() {
     return {
       dialogVisible: false,
-      arr:[],
+      arr: [],
       options: [
         {
           value: "sm",
-          label: "私密"
+          label: "私密",
         },
         {
           value: "fz",
-          label: "肥宅快乐"
+          label: "肥宅快乐",
         },
         {
           value: "ym",
-          label: "隐秘角落"
+          label: "隐秘角落",
         },
         {
           value: "tx",
-          label: "同性恋"
+          label: "同性恋",
         },
         {
           value: "wy",
-          label: "午夜失眠"
+          label: "午夜失眠",
         },
         {
           value: "sg",
-          label: "我是帅哥"
+          label: "我是帅哥",
         },
         {
           value: "mv",
-          label: "我是美女"
+          label: "我是美女",
         },
         {
           value: "wz",
-          label: "王者荣耀"
-        }
+          label: "王者荣耀",
+        },
       ],
-      value: ""
+      value: "",
     };
   },
   methods: {
-  
     selectChanged(value) {
       console.log(value);
     },
 
     addIcon() {
-      (this.dialogVisible = false)
-      if(this.arr.indexOf(this.value)>-1){
+      this.dialogVisible = false;
+      if (this.arr.indexOf(this.value) > -1) {
         return;
-      }else{
-        this.arr.push(this.value)
+      } else {
+        this.arr.push(this.value);
       }
-    
+
       // console.log("你是猪");
-      
-    }
+    },
   },
   components: {
-    Header
-  }
+    Header,
+  },
 };
 </script>
 
@@ -162,29 +166,29 @@ export default {
   // 动态添加小标签
   .icon {
     // display: none;
-    position:fixed;
+    position: fixed;
     width: 150px;
     height: 50px;
-    background-image: linear-gradient(to right, #E5E5E5 , #6348C9);
+    background-image: linear-gradient(to right, #e5e5e5, #6348c9);
     border-radius: 25px;
-     box-shadow: #8870e0  3px 3px 8px 2px; 
+    box-shadow: #8870e0 3px 3px 8px 2px;
     text-align: center;
     line-height: 50px;
     font-size: 25px;
     letter-spacing: 5px;
     color: #fff;
-    opacity: .88;
+    opacity: 0.88;
   }
   .sm {
     top: 266px;
-    left:205px;
+    left: 205px;
   }
   .fz {
     top: 457px;
     left: 74px;
   }
   .ym {
-    top:673px;
+    top: 673px;
     left: 278px;
   }
   .tx {
@@ -192,19 +196,19 @@ export default {
     left: 550px;
   }
   .wy {
-   bottom: 131px;
+    bottom: 131px;
     right: 647px;
   }
   .sg {
-       bottom: 233px;
+    bottom: 233px;
     right: 134px;
   }
   .mv {
- top: 470px;
+    top: 470px;
     right: 300px;
   }
   .wz {
-   top: 202px;
+    top: 202px;
     right: 420px;
   }
 }
