@@ -7,6 +7,7 @@ import Axios from 'axios'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import '../src/assets/font/iconfont.css'
 
 Axios.defaults.baseURL = 'http://localhost:8080/'
 

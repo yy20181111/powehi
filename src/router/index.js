@@ -11,19 +11,22 @@ VueRouter.prototype.push = function push(localtion) {
 }
 
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     redirect: '/home',
-   
-  },{
-    path:'/home',
+
+  }, {
+    path: '/home',
     component: () => import('../views/Home'),
   },
   {
     path: '/matching',
-    component: () => import('../views/Matching'),
+    component: () => import('../views/Matching/Matching'),
   }, {
+    path: '/Match',
+    component: () => import('../views/Matching/Match')
+  },
+  {
     path: '/topic',
     component: () => import('../views/TopicCenter'),
   }, {
@@ -32,7 +35,11 @@ const routes = [
   }, {
     path: '/about',
     component: () => import('../views/AboutUs'),
-  }]
+  },{
+    path:'/jb',
+    component:()=>import('../views/Matching/jb')
+  }
+]
 
 
 const router = new VueRouter({

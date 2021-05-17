@@ -6,7 +6,7 @@
     <div class="match-content">
       <!-- 开始匹配框 -->
       <div class="box">
-        <div class="match">开始匹配</div>
+        <div class="match" @click="toMatch">开始匹配</div>
         <div class="add" @click="dialogVisible = true">添加标签</div>
       </div>
       <!-- 添加弹出框 -->
@@ -29,6 +29,8 @@
           <el-button type="primary" @click="addIcon()">确 定</el-button>
         </span>
       </el-dialog>
+      <!-- 开始匹配弹出框 -->
+ 
       <!-- 动态添加小标签 -->
       <div
         class="icon"
@@ -43,7 +45,7 @@
 </template>
 
 <script>
-import Header from "../components/header";
+import Header from "../../components/header";
 export default {
   data() {
     return {
@@ -98,9 +100,10 @@ export default {
       } else {
         this.arr.push(this.value);
       }
-
-      // console.log("你是猪");
     },
+    toMatch(){
+    this.$router.push('/Match')
+    }
   },
   components: {
     Header,
@@ -116,7 +119,7 @@ export default {
   width: 100%;
   height: calc(100% - 122px);
   // background-image: url("../assets/images/bg2.png");
-  background: url("../assets/images/bg2.png") no-repeat fixed 0 0;
+  background: url("../../assets/images/bg2.png") no-repeat fixed 0 0;
   background-size: cover;
   overflow: hidden;
   position: relative;

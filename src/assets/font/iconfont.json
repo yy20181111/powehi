@@ -1,0 +1,30 @@
+{
+  "id": "2553071",
+  "name": "powehi",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8620355",
+      "name": "飞机",
+      "font_class": "feiji",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "12184892",
+      "name": "笑脸",
+      "font_class": "xiaolian",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "19262125",
+      "name": "加",
+      "font_class": "jia",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    }
+  ]
+}
